@@ -3,4 +3,4 @@ Bootcamp Stuff
 
 ## Challenge 1 - personal profile
 
-I'm Luke, an apprentice software developer. I like gunea pigs and other things.
+I'm Luke, an apprentice software developer. I like guinea pigs and other things.
