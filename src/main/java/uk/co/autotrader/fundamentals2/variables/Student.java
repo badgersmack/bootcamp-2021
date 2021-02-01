@@ -14,8 +14,7 @@ public class Student {
     }
 
     public static void main(String[] args) {
-        Student studentCalledJohn = new Student( name: "John");
-
-        // incomplaete code
+        Student student = new Student("John");
+        student.printDetails();
     }
 }
