@@ -33,6 +33,12 @@ public class DataTypes {
         char gender = 'f'; //single character  16 bit unicode value
         System.out.println("gender = " + gender);
 
+        int million = 1000000;
+        System.out.println("million = " + million);
+        int easyReadMillion = 1_000_000;
+        System.out.println("easyReadMillion = " + easyReadMillion);
+        double easyreadfloatwer= 1_999.000_000;
+        System.out.println("easyreadfloatwer = " + easyreadfloatwer);
 
         // Non-primitive
     }
