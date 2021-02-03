@@ -31,6 +31,21 @@ public class IfStatements {
     }
 
     public static void sayAgeMessage() {
+
         System.out.println("YEAH!");
+    }
+
+    public static void otherIf() {
+        long mileage = 100000L;
+
+        if (mileage < 200000L) {
+            System.out.println("not that far");
+        }
+
+        String firstName = "Luke";
+
+        if (firstName.startsWith("L")) {
+            System.out.println("Bonus time");
+        }
     }
 }
