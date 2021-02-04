@@ -1,7 +1,7 @@
 package uk.co.autotrader.fundamentals4;
 
 public class Cakemaker {
-    // <modifier> <optional static> <returnValue> methodName(parameters)
+    // <modifier> <optional static> <returnValue> methodName(parameters) [aka method signature]
     // <<throws exception e.e. error>> {
     // }
 
