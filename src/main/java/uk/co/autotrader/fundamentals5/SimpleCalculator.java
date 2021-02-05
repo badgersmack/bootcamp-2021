@@ -21,4 +21,9 @@ public class SimpleCalculator {
 
         return firstNumber / secondNumber;
     }
+
+
+    public static int modulus(int firstNumber, int secondNumber) {
+        return firstNumber % secondNumber;
+    }
 }

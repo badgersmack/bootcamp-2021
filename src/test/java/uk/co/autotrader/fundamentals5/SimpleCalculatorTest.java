@@ -2,6 +2,8 @@ package uk.co.autotrader.fundamentals5;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class SimpleCalculatorTest {
@@ -101,6 +103,28 @@ public class SimpleCalculatorTest {
         Assertions.assertThatExceptionOfType(ArithmeticException.class)
                 .isThrownBy(
                         () -> SimpleCalculator.divide(firstNumber, secondNumber));
+
+    }
+
+    @Test
+    void whenTwoNumbersArePassedToModulousThenRemainderIsReturned() {
+        int firstNumber = 10;
+        int secondNumber = 8;
+
+        int result = SimpleCalculator.modulus(firstNumber, secondNumber);
+
+        Assertions.assertThat(result).isEqualTo(2);
+    }
+
+    @Tag("BugTest")
+    @RepeatedTest(5)
+    void whenMultiplicationIsPerformedMultipleTimesThenSumIsStillReturned() {
+        int firstNumber = 2;
+        int secondNumber = 5;
+
+        int result = SimpleCalculator.multiply(firstNumber, secondNumber);
+
+        Assertions.assertThat(result).isEqualTo(10);
 
     }
 }
