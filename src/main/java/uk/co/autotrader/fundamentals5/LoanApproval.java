@@ -1,6 +1,10 @@
 package uk.co.autotrader.fundamentals5;
 
 public class LoanApproval {
+    boolean percentCheck = false;
+    boolean decision = false;
+
+
 
     public static boolean fundCheck(double downPayment, double availableFunds) {
         boolean decision = false;
@@ -17,6 +21,15 @@ public class LoanApproval {
             percentCheck = true;
         }
         return percentCheck;
+    }
+
+    public static boolean finalCheck(boolean fundCheck, boolean tenPercentCheck) {
+        boolean finalCheck = true;
+
+        if ((fundCheck == false) || (tenPercentCheck == false)) {
+            finalCheck = false;
+        }
+        return finalCheck;
     }
 }
 

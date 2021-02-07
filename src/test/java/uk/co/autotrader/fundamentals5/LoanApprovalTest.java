@@ -29,4 +29,14 @@ public class LoanApprovalTest {
         Assertions.assertThat(tenPercentCheck).isTrue();
     }
 
-}
+    @Test
+    void whenLoanBooleansAreFalseThenReject(){
+        boolean fundCheck = true;
+        boolean tenPercentCheck = false;
+
+        boolean finalCheck = LoanApproval.finalCheck(fundCheck, tenPercentCheck);
+
+        Assertions.assertThat(finalCheck).isFalse();
+        }
+    }
+
