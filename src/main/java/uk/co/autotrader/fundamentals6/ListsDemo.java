@@ -3,9 +3,10 @@ package uk.co.autotrader.fundamentals6;
 import java.util.ArrayList;
 
 public class ListsDemo {
+
     public static void main(String[] args) {
         ArrayList<String> names = new ArrayList<>();
-        
+
         names.add("John");
         names.add("Susan");
 
@@ -18,28 +19,40 @@ public class ListsDemo {
         names.add("Jacob");
 
         for (String name : names) {
-            System.out.println("bonus name = " + name);
+            System.out.println("enhanced name = " + name);
         }
-        
-        boolean lol = names.contains("Adam");
-        System.out.println("lol = " + lol);
 
-        //Integer class exists
+        // check if something exists in a list:
+        boolean isAdamPresent = names.contains("Adam");
+        System.out.println("isAdamPresent = " + isAdamPresent);
 
-        Integer number = 5;
+        /*
+        // Array example:
+
+        String [] otherNames = { "Bob", "Tom" };
+
+        for (String otherName : otherNames) {
+            System.out.println("otherName = " + otherName);
+        }
+        */
+
+        // int, double, long, char, boolean, float, short, byte
+        Integer number = 5; // autoboxing
+
+        int numberOfStudents = 5;
 
         ArrayList<Integer> lotteryNumbers = new ArrayList<>();
-
         lotteryNumbers.add(4);
-        lotteryNumbers.add(5);
-        lotteryNumbers.add(6);
+        lotteryNumbers.add(99);
 
-        System.out.println("lotteryNumbers 1 = " + lotteryNumbers.get(0)); //gets first array number
+        // retrieve:
+        System.out.println("lottery number 2 = " + lotteryNumbers.get(1));
 
         lotteryNumbers.remove(0);
-        System.out.println("lotteryNumbers = " + lotteryNumbers);
 
-        
+        for (Integer lotteryNumber : lotteryNumbers) {
+            System.out.println("number = " + lotteryNumber);
+        }
 
     }
 }
