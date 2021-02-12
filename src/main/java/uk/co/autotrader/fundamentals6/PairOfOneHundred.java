@@ -8,9 +8,9 @@ public class PairOfOneHundred {
         int [] scores2 = {1, 100, 99, 100};
         int [] scores3 = {100, 1, 100, 100};
 
-        int[] demoArray = scores1;
-        for (int i = 0; i < demoArray.length; i++) {
-            if (i-1 == 1) {
+        int[] demoArray = scores3;
+        for (int i = 0; i < demoArray.length -1; i++) {
+            if (demoArray[i] == demoArray[i + 1]) {
                 System.out.println("True");
             }
             else {
