@@ -1,9 +1,9 @@
 package uk.co.autotrader.fundamentals7;
 
-import uk.co.effectiveitltd.fundamentals8.Human;
+import uk.co.autotrader.fundamentals8.Human;
 
 public class People {
-
+/* /example code
     public static void main(String[] args) {
         Address megansAddress = new Address("10 street name",
                 "",
@@ -18,5 +18,5 @@ public class People {
 
         Human audrey = new Human();
     }
-
+*/
 }

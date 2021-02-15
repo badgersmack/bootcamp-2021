@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import uk.co.autotrader.fundamentals7.RomanNumeralsKata;
 
 import java.util.stream.Stream;
 
@@ -15,7 +16,7 @@ public class RomanNumeralsKataTest {
 
         int number = 1;
 
-        String result = RomanNumbersKata.whenNumberInputtedGiveRomanNumeral(number);
+        String result = RomanNumeralsKata.whenNumberInputtedGiveRomanNumeral(number);
 
         String expectedValue = "I";
 
@@ -28,7 +29,7 @@ public class RomanNumeralsKataTest {
 
         int number = 2;
 
-        String result = RomanNumbersKata.whenNumberInputtedGiveRomanNumeral(number);
+        String result = RomanNumeralsKata.whenNumberInputtedGiveRomanNumeral(number);
 
         String expectedValue = "II";
 
@@ -39,7 +40,7 @@ public class RomanNumeralsKataTest {
     @ParameterizedTest
     @MethodSource("numberGenerator")
     void whenNumberIsInputThenReturnNumerals(int number, String expectedValue){
-         String result = RomanNumbersKata.whenNumberInputtedGiveRomanNumeral(number);
+         String result = RomanNumeralsKata.whenNumberInputtedGiveRomanNumeral(number);
          Assertions.assertThat(result).isEqualTo(expectedValue);
     }
 

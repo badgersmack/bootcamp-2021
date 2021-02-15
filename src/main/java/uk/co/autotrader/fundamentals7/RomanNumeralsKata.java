@@ -1,6 +1,6 @@
 package uk.co.autotrader.fundamentals7;
 
-public class RomanNumbersKata {
+public class RomanNumeralsKata {
     public static String whenNumberInputtedGiveRomanNumeral(final int number) {
         String romanNumeral = "";
 

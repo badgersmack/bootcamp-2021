@@ -11,6 +11,8 @@ public class Garage {
         Car kuga = new Car("Ford", 2.0f);
 
         Car golf = new Car("Volkswagon", 1.0f);
+
+        System.out.println("cars = " + golf + kuga);
     }
 
 

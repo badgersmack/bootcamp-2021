@@ -1,56 +1,64 @@
 package uk.co.autotrader.fundamentals8;
 
+import java.text.MessageFormat;
+import java.util.Date;
+import java.util.List;
+
 public class Account {
-    private String accountNumber;
+
+    private final String accountNumber;
+    private final String custFirstName;
+    private final String custSurname;
+    private final List<Transaction> transactions;
+
     private double balance;
-    private String customerName;
-    private String customerEmail;
 
-    public Account() {
-    }
-
-    public Account(final String accountNumber, final double balance,
-                   final String customerName, final String customerEmail) {
+    public Account(final String accountNumber, final String custFirstName, final String custSurname,
+                   final double balance, final List<Transaction> transactions) {
         this.accountNumber = accountNumber;
+        this.custFirstName = custFirstName;
+        this.custSurname = custSurname;
         this.balance = balance;
-        this.customerName = customerName;
-
-        //setCustomerName(customerName); possible but not preferred
-
-        this.customerEmail = customerEmail;
-    }
-
-    public void setCustomerName(String customerName) {
-        if (customerName.startsWith("D")) {
-            this.customerName = customerName;
-        }
-        else {
-            System.out.println("No account allowed for customer");
-        }
+        this.transactions = transactions;
     }
 
     public String getAccountNumber() {
         return accountNumber;
     }
 
+    public String getCustFirstName() {
+        return custFirstName;
+    }
+
+    public String getCustSurname() {
+        return custSurname;
+    }
+
     public double getBalance() {
         return balance;
     }
 
-    public String getCustomerName() {
-        return customerName;
+    public List<Transaction> getTransactions() {
+        return transactions;
     }
 
-    public String getCustomerEmail() {
-        return customerEmail;
+    public double credit(final double amountToDeposit) {
+        this.balance += amountToDeposit;
+
+        this.transactions.add(new Transaction(new Date(), amountToDeposit, "IN - New transaction"));
+
+        return this.balance;
+    }
+
+    public double debit(final double amountToWithdraw) {
+        this.balance -= amountToWithdraw;
+
+        this.transactions.add(new Transaction(new Date(), amountToWithdraw, "OUT - New transaction"));
+
+        return this.balance;
     }
 
     public String toString() {
-        return "Account{" +
-                "accountNumber='" + accountNumber + '\'' +
-                ", balance=" + balance +
-                ", customerName='" + customerName + '\'' +
-                ", customerEmail='" + customerEmail + '\'' +
-                '}';
+        return MessageFormat.format("Transactions:\n {0}", this.transactions);
     }
 }
