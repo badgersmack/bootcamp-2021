@@ -61,4 +61,8 @@ public class Account {
     public String toString() {
         return MessageFormat.format("Transactions:\n {0}", this.transactions);
     }
+
+    public void setCustomerName(String customerName) {
+        //code here i guess?
+    }
 }
