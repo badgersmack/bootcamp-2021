@@ -21,10 +21,5 @@ public class RossoRestaurant {
             System.out.println(rossoMenu.containsValue("Mexican"));
 
         }
-
-        Stream<String> keys = rossoMenu.entrySet().stream()
-                .filter(x -> "Mexican".equals(x.getValue()))
-                .map(Map.Entry::getKey);
-        System.out.println(keys);
     }
 }
